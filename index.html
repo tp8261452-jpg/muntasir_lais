@@ -19,7 +19,7 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family:'Poppins', sans-serif;
     }
 
     html{
@@ -29,28 +29,35 @@
     body{
       background:#0f172a;
       color:white;
+      overflow-x:hidden;
     }
 
+    /* Navbar */
+
     .navbar{
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(10px);
+      background:rgba(15, 23, 42, 0.95);
+      backdrop-filter:blur(10px);
+      padding:15px 0;
     }
 
     .navbar-brand{
+      font-size:1.7rem;
       font-weight:700;
-      font-size:1.5rem;
       color:#38bdf8 !important;
     }
 
     .nav-link{
       color:white !important;
-      margin-left:15px;
+      margin-left:18px;
       transition:0.3s;
+      font-weight:500;
     }
 
     .nav-link:hover{
       color:#38bdf8 !important;
     }
+
+    /* Hero */
 
     .hero{
       min-height:100vh;
@@ -58,8 +65,23 @@
       align-items:center;
       justify-content:center;
       text-align:center;
-      padding:40px 20px;
-      background: linear-gradient(to right, #0f172a, #111827);
+      padding:120px 20px 80px;
+      background:linear-gradient(to right,#0f172a,#111827);
+    }
+
+    .profile-img{
+      width:220px;
+      height:220px;
+      object-fit:cover;
+      border-radius:50%;
+      border:5px solid #38bdf8;
+      box-shadow:0 0 30px rgba(56,189,248,0.5);
+      margin-bottom:30px;
+      transition:0.4s;
+    }
+
+    .profile-img:hover{
+      transform:scale(1.05);
     }
 
     .hero h1{
@@ -67,33 +89,45 @@
       font-weight:700;
     }
 
-    .hero span{
+    .hero h1 span{
       color:#38bdf8;
     }
 
+    .typing{
+      color:#38bdf8;
+      font-weight:600;
+      margin-top:15px;
+      display:block;
+      font-size:1.5rem;
+    }
+
     .hero p{
+      max-width:750px;
+      margin:25px auto;
       color:#cbd5e1;
-      max-width:700px;
-      margin:auto;
-      margin-top:20px;
       font-size:1.1rem;
+      line-height:1.8;
     }
 
     .btn-custom{
       background:#38bdf8;
-      color:#000;
-      font-weight:600;
-      padding:12px 30px;
+      color:black;
+      padding:12px 32px;
       border:none;
       border-radius:50px;
-      margin-top:25px;
+      font-weight:600;
       transition:0.3s;
+      text-decoration:none;
+      display:inline-block;
     }
 
     .btn-custom:hover{
       background:white;
-      transform:translateY(-3px);
+      transform:translateY(-5px);
+      color:black;
     }
+
+    /* Sections */
 
     section{
       padding:90px 20px;
@@ -105,19 +139,22 @@
     }
 
     .section-title h2{
-      font-size:2.5rem;
-      font-weight:700;
       color:#38bdf8;
+      font-size:2.8rem;
+      font-weight:700;
     }
+
+    /* Cards */
 
     .about-box,
     .skill-box,
     .project-card,
     .contact-box{
       background:#1e293b;
+      padding:35px;
       border-radius:20px;
-      padding:30px;
-      transition:0.3s;
+      transition:0.4s;
+      height:100%;
     }
 
     .about-box:hover,
@@ -125,33 +162,55 @@
     .project-card:hover,
     .contact-box:hover{
       transform:translateY(-10px);
-      box-shadow:0 10px 30px rgba(56,189,248,0.2);
+      box-shadow:0 10px 35px rgba(56,189,248,0.25);
+    }
+
+    /* Skills */
+
+    .skill-box{
+      text-align:center;
     }
 
     .skill-box i{
-      font-size:40px;
-      margin-bottom:15px;
+      font-size:45px;
+      margin-bottom:20px;
       color:#38bdf8;
     }
 
+    .skill-box h4{
+      margin-bottom:15px;
+      font-weight:600;
+    }
+
+    /* Projects */
+
     .project-card img{
       width:100%;
+      height:230px;
+      object-fit:cover;
       border-radius:15px;
       margin-bottom:20px;
     }
 
     .project-card h4{
       color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    /* Contact */
+
+    .social-icons{
+      margin-top:25px;
     }
 
     .social-icons a{
+      width:50px;
+      height:50px;
+      background:#38bdf8;
+      color:black;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      width:45px;
-      height:45px;
-      background:#38bdf8;
-      color:black;
       border-radius:50%;
       margin:10px;
       text-decoration:none;
@@ -160,26 +219,41 @@
     }
 
     .social-icons a:hover{
-      transform:scale(1.1);
       background:white;
+      transform:scale(1.1);
     }
+
+    /* Footer */
 
     footer{
       background:#020617;
+      padding:25px;
       text-align:center;
-      padding:20px;
       color:#94a3b8;
+      font-size:15px;
     }
 
-    .typing{
-      color:#38bdf8;
-      font-weight:600;
-    }
+    /* Responsive */
 
     @media(max-width:768px){
+
       .hero h1{
         font-size:2.5rem;
       }
+
+      .typing{
+        font-size:1.2rem;
+      }
+
+      .profile-img{
+        width:170px;
+        height:170px;
+      }
+
+      .section-title h2{
+        font-size:2.2rem;
+      }
+
     }
   </style>
 </head>
@@ -187,8 +261,10 @@
 <body>
 
   <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
+
       <a class="navbar-brand" href="#">Muntasir</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -196,72 +272,116 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
+
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
         </ul>
+
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
+
   <section class="hero" id="home">
+
     <div class="container">
+
+      <img
+        src="https://i.postimg.cc/26C1qrV5/Whats-App-Image-2026-05-19-at-1-41-26-PM.jpg"
+        alt="Muntasir Lais"
+        class="profile-img"
+      >
+
       <h1>Hello, I'm <span>Muntasir Lais</span></h1>
 
-      <h3 class="mt-3">
-        <span class="typing"></span>
-      </h3>
+      <span class="typing"></span>
 
       <p>
-        I am a CSE Undergraduate Student at Daffodil International University (DIU).
-        Passionate about Web Development, Programming, Cyber Security,
-        and Modern Technology.
+        I am a passionate Computer Science and Engineering (CSE) Undergraduate
+        student at Daffodil International University (DIU).
+        I love Web Development, Programming, Technology,
+        and exploring Cyber Security.
       </p>
 
-      <a href="#contact" class="btn btn-custom">Hire Me</a>
+      <a href="#contact" class="btn-custom">
+        Contact Me
+      </a>
+
     </div>
+
   </section>
 
   <!-- About -->
+
   <section id="about">
+
     <div class="container">
+
       <div class="section-title">
         <h2>About Me</h2>
       </div>
 
       <div class="row justify-content-center">
+
         <div class="col-lg-8">
+
           <div class="about-box text-center">
+
             <h3 class="mb-4">Who Am I?</h3>
 
             <p>
-              My name is <strong>Muntasir Lais</strong>. I am currently studying
-              Computer Science and Engineering at
+              My name is <strong>Muntasir Lais</strong>.
+              I am currently studying Computer Science and Engineering at
               <strong>Daffodil International University (DIU)</strong>.
             </p>
 
             <p>
-              I enjoy building websites, learning new technologies,
-              solving programming problems, and exploring the world of cybersecurity.
+              I enjoy creating modern websites, learning new technologies,
+              and improving my programming skills every day.
             </p>
 
             <p>
-              My goal is to become a skilled Software Engineer and contribute
-              to innovative technology solutions.
+              My goal is to become a successful Software Engineer
+              and contribute to innovative technology solutions.
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- Skills -->
+
   <section id="skills">
+
     <div class="container">
+
       <div class="section-title">
         <h2>Skills</h2>
       </div>
@@ -269,60 +389,113 @@
       <div class="row g-4">
 
         <div class="col-md-4">
-          <div class="skill-box text-center">
+
+          <div class="skill-box">
+
             <i class="fa-brands fa-html5"></i>
+
             <h4>HTML5</h4>
-            <p>Modern and semantic webpage structure design.</p>
+
+            <p>
+              Creating structured and semantic modern web pages.
+            </p>
+
           </div>
+
         </div>
 
         <div class="col-md-4">
-          <div class="skill-box text-center">
+
+          <div class="skill-box">
+
             <i class="fa-brands fa-css3-alt"></i>
+
             <h4>CSS3</h4>
-            <p>Responsive and professional UI/UX styling.</p>
+
+            <p>
+              Building beautiful, responsive, and modern designs.
+            </p>
+
           </div>
+
         </div>
 
         <div class="col-md-4">
-          <div class="skill-box text-center">
+
+          <div class="skill-box">
+
             <i class="fa-brands fa-js"></i>
+
             <h4>JavaScript</h4>
-            <p>Interactive and dynamic website functionality.</p>
+
+            <p>
+              Adding interactivity and dynamic functionality to websites.
+            </p>
+
           </div>
+
         </div>
 
         <div class="col-md-4">
-          <div class="skill-box text-center">
+
+          <div class="skill-box">
+
             <i class="fa-brands fa-bootstrap"></i>
+
             <h4>Bootstrap</h4>
-            <p>Fast and responsive frontend development.</p>
+
+            <p>
+              Fast and responsive frontend development framework.
+            </p>
+
           </div>
+
         </div>
 
         <div class="col-md-4">
-          <div class="skill-box text-center">
+
+          <div class="skill-box">
+
             <i class="fa-solid fa-code"></i>
+
             <h4>Programming</h4>
-            <p>Problem solving and coding fundamentals.</p>
+
+            <p>
+              Problem-solving and programming fundamentals.
+            </p>
+
           </div>
+
         </div>
 
         <div class="col-md-4">
-          <div class="skill-box text-center">
+
+          <div class="skill-box">
+
             <i class="fa-solid fa-shield-halved"></i>
+
             <h4>Cyber Security</h4>
-            <p>Basic understanding of digital security concepts.</p>
+
+            <p>
+              Understanding basic cybersecurity and online safety concepts.
+            </p>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
   <!-- Projects -->
+
   <section id="projects">
+
     <div class="container">
+
       <div class="section-title">
         <h2>Projects</h2>
       </div>
@@ -330,78 +503,111 @@
       <div class="row g-4">
 
         <div class="col-md-6">
-          <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="project">
 
-            <h4>Portfolio Website</h4>
+          <div class="project-card">
+
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Project">
+
+            <h4>Personal Portfolio</h4>
 
             <p>
-              A fully responsive personal portfolio website using
+              A fully responsive personal portfolio website built using
               HTML, CSS, JavaScript, and Bootstrap.
             </p>
+
           </div>
+
         </div>
 
         <div class="col-md-6">
+
           <div class="project-card">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="project">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Project">
 
             <h4>University Project</h4>
 
             <p>
-              Academic project focused on modern web technologies
-              and software development concepts.
+              Academic project based on software development
+              and modern web technologies.
             </p>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
   <!-- Contact -->
+
   <section id="contact">
+
     <div class="container">
+
       <div class="section-title">
         <h2>Contact Me</h2>
       </div>
 
       <div class="row justify-content-center">
+
         <div class="col-lg-8">
+
           <div class="contact-box text-center">
 
-            <h4 class="mb-4">Let's Connect</h4>
+            <h3 class="mb-4">Let's Connect</h3>
 
             <p>
-              Interested in working together or discussing technology?
-              Feel free to contact me.
+              Interested in collaborating or discussing technology?
+              Feel free to contact me through social media.
             </p>
 
-            <div class="social-icons mt-4">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-github"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <div class="social-icons">
+
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a href="#">
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
             </div>
 
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- Footer -->
+
   <footer>
-    <p>
-      © 2026 Muntasir Lais | CSE Undergraduate at DIU
-    </p>
+    © 2026 Muntasir Lais | CSE Undergraduate at DIU
   </footer>
 
   <!-- Bootstrap JS -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Typing Animation -->
+
   <script>
-    // Typing Animation
 
     const texts = [
       "CSE Undergraduate",
@@ -415,9 +621,9 @@
     let currentText = "";
     let letter = "";
 
-    (function type() {
+    (function type(){
 
-      if (count === texts.length) {
+      if(count === texts.length){
         count = 0;
       }
 
@@ -426,15 +632,21 @@
 
       document.querySelector(".typing").textContent = letter;
 
-      if (letter.length === currentText.length) {
+      if(letter.length === currentText.length){
+
         count++;
         index = 0;
+
         setTimeout(type, 1200);
+
       } else {
+
         setTimeout(type, 100);
+
       }
 
     })();
+
   </script>
 
 </body>
